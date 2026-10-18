@@ -4,7 +4,11 @@
 
 > Microsoft Hackathon · Theme: **Knowledge Preservation**
 
-[![Watch the demo video (4:38)](docs/images/demo-thumbnail.jpg)](docs/Azure-Recall-Demo.mp4)
+### ▶ Demo video (4:38)
+
+https://github.com/user-attachments/assets/4dd5fcce-62a2-48d6-96d3-1a8f35d9c6b5
+
+*Full-quality version: [docs/Azure-Recall-Demo.mp4](docs/Azure-Recall-Demo.mp4)*
 
 ## The problem
 
