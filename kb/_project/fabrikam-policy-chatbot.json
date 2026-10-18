@@ -1,0 +1,1 @@
+{"id": "fabrikam-policy-chatbot", "name": "Fabrikam Policy Chatbot", "owner": "arjun@contoso.com", "members": [], "client": "Fabrikam Insurance", "visibility": "org", "domain": "engineering", "description": "RAG assistant over 40k insurance policy PDFs, Azure AI Search + Azure OpenAI.", "created": "2026-10-18"}

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0078d4"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#605e5c"/></marker>
+    <style>
+      .lane{font-size:14px;font-weight:700;fill:#323130}
+      .ls{font-size:12px;fill:#605e5c}
+      .t{font-size:13.5px;font-weight:600;fill:#323130}
+      .s{font-size:12px;fill:#605e5c}
+      .st{fill:#fff;stroke:#0078d4;stroke-width:1.5}
+      .ai{fill:#fff;stroke:#8764b8;stroke-width:1.5}
+      .dec{fill:#fff4ce;stroke:#c19c00;stroke-width:1.5}
+      .ok{fill:#dff6dd;stroke:#107c10;stroke-width:1.5}
+      .f{stroke:#0078d4;stroke-width:1.6;fill:none;marker-end:url(#a)}
+      .fg{stroke:#605e5c;stroke-width:1.4;fill:none;marker-end:url(#g);stroke-dasharray:5 4}
+      .n{font-size:12px;font-weight:700;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1280" height="820" fill="#faf9f8"/>
+  <text x="40" y="44" font-size="24" font-weight="700" fill="#323130">Azure Recall: end-to-end workflow</text>
+  <text x="40" y="68" font-size="14" fill="#605e5c">How knowledge from Team A's project reaches Team B's new project with the owner's approval, then grows again.</text>
+
+  <!-- lanes -->
+  <g>
+    <rect x="40" y="90" width="1200" height="150" fill="#fff" stroke="#edebe9"/>
+    <rect x="40" y="90" width="150" height="150" fill="#f3f2f1"/>
+    <text x="56" y="150" class="lane">Team A</text><text x="56" y="170" class="ls">Priya, project owner</text><text x="56" y="186" class="ls">(Contoso project)</text>
+    <rect x="40" y="250" width="1200" height="190" fill="#fff" stroke="#edebe9"/>
+    <rect x="40" y="250" width="150" height="190" fill="#deecf9"/>
+    <text x="56" y="330" class="lane">Azure Recall</text><text x="56" y="350" class="ls">App Service, Entra ID,</text><text x="56" y="366" class="ls">Cosmos DB, OpenAI</text>
+    <rect x="40" y="450" width="1200" height="150" fill="#fff" stroke="#edebe9"/>
+    <rect x="40" y="450" width="150" height="150" fill="#f3f2f1"/>
+    <text x="56" y="510" class="lane">Team B</text><text x="56" y="530" class="ls">Maria + her coding agent</text><text x="56" y="546" class="ls">(new client, same problem)</text>
+  </g>
+
+  <!-- Team A -->
+  <rect x="210" y="120" width="190" height="90" rx="4" class="st"/>
+  <circle cx="228" cy="138" r="11" fill="#0078d4"/><text x="224" y="142" class="n">1</text>
+  <text x="246" y="143" class="t">Solve with AI</text>
+  <text x="222" y="166" class="s">Builds the SQL agent with</text><text x="222" y="182" class="s">Claude / Copilot; research</text><text x="222" y="198" class="s">lives in chat history</text>
+
+  <rect x="430" y="120" width="190" height="90" rx="4" class="st"/>
+  <circle cx="448" cy="138" r="11" fill="#0078d4"/><text x="444" y="142" class="n">2</text>
+  <text x="466" y="143" class="t">Capture</text>
+  <text x="442" y="166" class="s">Pastes the AI session or</text><text x="442" y="182" class="s">agent calls capture_notes</text><text x="442" y="198" class="s">into a restricted project</text>
+
+  <rect x="880" y="120" width="190" height="90" rx="4" class="dec"/>
+  <circle cx="898" cy="138" r="11" fill="#c19c00"/><text x="894" y="142" class="n">6</text>
+  <text x="916" y="143" class="t">Owner decides</text>
+  <text x="892" y="166" class="s">Sees requester, project</text><text x="892" y="182" class="s">and justification in</text><text x="892" y="198" class="s">Access requests</text>
+
+  <!-- Recall -->
+  <rect x="430" y="275" width="190" height="140" rx="4" class="ai"/>
+  <circle cx="448" cy="293" r="11" fill="#8764b8"/><text x="444" y="297" class="n">3</text>
+  <text x="466" y="298" class="t">Extract lessons</text>
+  <text x="442" y="322" class="s">Azure OpenAI splits the</text><text x="442" y="338" class="s">transcript into reusable</text><text x="442" y="354" class="s">lessons, drops secrets and</text><text x="442" y="370" class="s">personal data; stored in</text><text x="442" y="386" class="s">Cosmos DB with project,</text><text x="442" y="402" class="s">owner, domain, tags</text>
+
+  <rect x="655" y="275" width="190" height="140" rx="4" class="st"/>
+  <circle cx="673" cy="293" r="11" fill="#0078d4"/><text x="667" y="297" class="n">✓</text>
+  <text x="691" y="298" class="t">Access check</text>
+  <text x="667" y="322" class="s">Identity from Entra ID.</text><text x="667" y="338" class="s">Readable: org-visible or</text><text x="667" y="354" class="s">member. Restricted: title</text><text x="667" y="370" class="s">+ owner only (locked).</text><text x="667" y="386" class="s">Request stored as</text><text x="667" y="402" class="s">pending for the owner</text>
+
+  <rect x="880" y="275" width="190" height="140" rx="4" class="ok"/>
+  <circle cx="898" cy="293" r="11" fill="#107c10"/><text x="894" y="297" class="n">7</text>
+  <text x="916" y="298" class="t">Grant access</text>
+  <text x="892" y="322" class="s">Approved: Maria's Entra</text><text x="892" y="338" class="s">ID added to project</text><text x="892" y="354" class="s">members. Denied: content</text><text x="892" y="370" class="s">stays locked. Only the</text><text x="892" y="386" class="s">owner can decide.</text>
+
+  <rect x="1095" y="275" width="130" height="140" rx="4" class="ai"/>
+  <circle cx="1113" cy="293" r="11" fill="#8764b8"/><text x="1109" y="297" class="n">8</text>
+  <text x="1131" y="298" class="t">Plan</text>
+  <text x="1105" y="322" class="s">Azure OpenAI</text><text x="1105" y="338" class="s">writes a cited</text><text x="1105" y="354" class="s">checklist from</text><text x="1105" y="370" class="s">readable lessons</text><text x="1105" y="386" class="s">+ coverage gaps</text>
+
+  <!-- Team B -->
+  <rect x="655" y="480" width="190" height="90" rx="4" class="st"/>
+  <circle cx="673" cy="498" r="11" fill="#0078d4"/><text x="669" y="502" class="n">4</text>
+  <text x="691" y="503" class="t">Discover</text>
+  <text x="667" y="526" class="s">"SQL analytics agent for</text><text x="667" y="542" class="s">a retail client" → sees</text><text x="667" y="558" class="s">Contoso solved it (locked)</text>
+
+  <rect x="880" y="480" width="190" height="90" rx="4" class="st"/>
+  <circle cx="898" cy="498" r="11" fill="#0078d4"/><text x="894" y="502" class="n">5</text>
+  <text x="916" y="503" class="t">Request access</text>
+  <text x="892" y="526" class="s">One click + business</text><text x="892" y="542" class="s">justification (portal or</text><text x="892" y="558" class="s">request_project_access)</text>
+
+  <rect x="1095" y="480" width="130" height="90" rx="4" class="ok"/>
+  <circle cx="1113" cy="498" r="11" fill="#107c10"/><text x="1109" y="502" class="n">9</text>
+  <text x="1131" y="503" class="t">Reuse</text>
+  <text x="1105" y="526" class="s">Full plan, export</text><text x="1105" y="542" class="s">AGENTS.md for the</text><text x="1105" y="558" class="s">coding agent</text>
+
+  <!-- flows -->
+  <path d="M400 165 H430" class="f"/>
+  <path d="M525 210 V275" class="f"/>
+  <path d="M620 345 H655" class="f"/>
+  <path d="M750 480 V415" class="f"/>
+  <path d="M845 525 H880" class="f"/>
+  <path d="M975 480 V440 H780 V415" class="fg"/>
+  <path d="M845 300 H860 V165 H880" class="f"/>
+  <path d="M975 210 V275" class="f"/>
+  <path d="M1070 345 H1095" class="f"/>
+  <path d="M1160 415 V480" class="f"/>
+  <path d="M1160 570 V625 H525 V415" class="fg"/>
+  <text x="560" y="645" class="s">10. After building, Team B's agent calls capture_notes: new lessons flow back in, and votes flag outdated advice</text>
+
+  <!-- legend -->
+  <g transform="translate(40,690)">
+    <rect width="1200" height="100" fill="#fff" stroke="#edebe9"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#0078d4" letter-spacing=".06em">ACCESS RULES</text>
+    <text x="20" y="56" class="s">• Org-visible project: everyone in the tenant reads it   • Restricted project: discoverable by title and owner; readable after owner approval</text>
+    <text x="20" y="78" class="s">• Only members write to a project   • Only the owner approves   • Agents act with their user's identity and see exactly what the user can see</text>
+    <rect x="980" y="18" width="14" height="14" class="st"/><text x="1000" y="30" class="s">Action</text>
+    <rect x="1060" y="18" width="14" height="14" class="ai"/><text x="1080" y="30" class="s">Azure OpenAI</text>
+    <rect x="980" y="44" width="14" height="14" class="dec"/><text x="1000" y="56" class="s">Decision</text>
+    <rect x="1060" y="44" width="14" height="14" class="ok"/><text x="1080" y="56" class="s">Outcome</text>
+  </g>
+</svg>

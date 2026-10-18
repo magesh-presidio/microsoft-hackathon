@@ -1,0 +1,1 @@
+{"id": "contoso-retail-sql-agent", "name": "Contoso Retail SQL Agent", "owner": "priya@contoso.com", "members": [], "client": "Contoso Retail", "visibility": "restricted", "domain": "engineering", "description": "Natural-language analytics over the retail sales warehouse with Azure OpenAI.", "created": "2026-10-18"}

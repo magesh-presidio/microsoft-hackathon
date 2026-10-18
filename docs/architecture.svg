@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#605e5c"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0078d4"/></marker>
+    <style>
+      .t{font-size:15px;font-weight:600;fill:#323130}
+      .s{font-size:12px;fill:#605e5c}
+      .h{font-size:13px;font-weight:700;fill:#0078d4;letter-spacing:.06em}
+      .box{fill:#fff;stroke:#c8c6c4;stroke-width:1.2}
+      .az{fill:#fff;stroke:#0078d4;stroke-width:1.6}
+      .ln{stroke:#605e5c;stroke-width:1.5;fill:none;marker-end:url(#a)}
+      .lb{stroke:#0078d4;stroke-width:1.8;fill:none;marker-end:url(#b)}
+      .lab{font-size:11.5px;fill:#323130}
+      .chip{fill:#deecf9}
+    </style>
+  </defs>
+  <rect width="1280" height="760" fill="#faf9f8"/>
+  <text x="40" y="44" font-size="24" font-weight="700" fill="#323130">Azure Recall: reference architecture</text>
+  <text x="40" y="68" class="s" font-size="14">Knowledge produced in AI-assisted projects is captured, governed by project owners, and reused by every team and every agent.</text>
+
+  <!-- CONSUMERS -->
+  <text x="40" y="112" class="h">PEOPLE &amp; AGENTS</text>
+  <rect x="40" y="124" width="230" height="74" rx="4" class="box"/>
+  <text x="58" y="152" class="t">Teams (web portal)</text>
+  <text x="58" y="172" class="s">Engineering, sales, delivery, ops</text>
+  <text x="58" y="188" class="s">discover · capture · approve</text>
+  <rect x="40" y="214" width="230" height="74" rx="4" class="box"/>
+  <text x="58" y="242" class="t">AI coding agents</text>
+  <text x="58" y="262" class="s">GitHub Copilot, Claude Code, Cursor</text>
+  <text x="58" y="278" class="s">via MCP (Model Context Protocol)</text>
+  <rect x="40" y="304" width="230" height="74" rx="4" class="box"/>
+  <text x="58" y="332" class="t">Microsoft 365 Copilot</text>
+  <text x="58" y="352" class="s">Copilot Studio agent (roadmap)</text>
+  <text x="58" y="368" class="s">same REST / MCP surface</text>
+
+  <!-- IDENTITY -->
+  <rect x="330" y="124" width="250" height="110" rx="4" class="az"/>
+  <rect x="330" y="124" width="250" height="26" rx="4" class="chip"/>
+  <text x="344" y="142" class="h">IDENTITY</text>
+  <text x="344" y="174" class="t">Microsoft Entra ID</text>
+  <text x="344" y="194" class="s">SSO for users; OAuth tokens for agents</text>
+  <text x="344" y="210" class="s">App Service Easy Auth injects the</text>
+  <text x="344" y="226" class="s">verified principal on every request</text>
+
+  <!-- APP -->
+  <rect x="330" y="270" width="250" height="250" rx="4" class="az"/>
+  <rect x="330" y="270" width="250" height="26" rx="4" class="chip"/>
+  <text x="344" y="288" class="h">APPLICATION</text>
+  <text x="344" y="320" class="t">Azure App Service (Linux)</text>
+  <text x="344" y="338" class="s">FastAPI · system-assigned identity</text>
+  <rect x="344" y="352" width="222" height="28" rx="3" fill="#f3f2f1"/><text x="354" y="371" class="lab">Web portal + REST API</text>
+  <rect x="344" y="386" width="222" height="28" rx="3" fill="#f3f2f1"/><text x="354" y="405" class="lab">MCP server  /mcp  (6 tools)</text>
+  <rect x="344" y="420" width="222" height="28" rx="3" fill="#f3f2f1"/><text x="354" y="439" class="lab">Access policy: project owner approves</text>
+  <rect x="344" y="454" width="222" height="28" rx="3" fill="#f3f2f1"/><text x="354" y="473" class="lab">Capture pipeline: transcript → lessons</text>
+  <text x="344" y="506" class="s">Keyless: no secrets in config</text>
+
+  <!-- DATA + AI -->
+  <text x="660" y="112" class="h">DATA &amp; AI</text>
+  <rect x="660" y="124" width="270" height="100" rx="4" class="az"/>
+  <text x="676" y="152" class="t">Azure OpenAI (gpt-5-mini)</text>
+  <text x="676" y="172" class="s">Ranks knowledge for a task, writes</text>
+  <text x="676" y="188" class="s">checklists, extracts lessons from chats,</text>
+  <text x="676" y="204" class="s">strips secrets and personal data</text>
+  <rect x="660" y="240" width="270" height="100" rx="4" class="az"/>
+  <text x="676" y="268" class="t">Azure Cosmos DB (serverless)</text>
+  <text x="676" y="288" class="s">Projects, knowledge entries, access requests</text>
+  <text x="676" y="304" class="s">Entra RBAC data plane, partition key /kind</text>
+  <text x="676" y="320" class="s">pay-per-request: cheap per tenant</text>
+  <rect x="660" y="356" width="270" height="84" rx="4" class="box" stroke-dasharray="5 4"/>
+  <text x="676" y="384" class="t">Azure AI Search (scale-out)</text>
+  <text x="676" y="404" class="s">Hybrid vector + semantic ranker with</text>
+  <text x="676" y="420" class="s">security-trimmed filters past ~1k entries</text>
+  <rect x="660" y="456" width="270" height="76" rx="4" class="box"/>
+  <text x="676" y="484" class="t">Azure Resource Manager</text>
+  <text x="676" y="504" class="s">Scan subscriptions and export</text>
+  <text x="676" y="520" class="s">redeployable ARM templates</text>
+
+  <!-- OPS -->
+  <text x="1000" y="112" class="h">OPERATE &amp; SELL</text>
+  <rect x="1000" y="124" width="240" height="84" rx="4" class="az"/>
+  <text x="1016" y="152" class="t">Application Insights</text>
+  <text x="1016" y="172" class="s">OpenTelemetry traces, failures,</text>
+  <text x="1016" y="188" class="s">usage of knowledge by team</text>
+  <rect x="1000" y="224" width="240" height="84" rx="4" class="box" stroke-dasharray="5 4"/>
+  <text x="1016" y="252" class="t">Logic Apps / Teams</text>
+  <text x="1016" y="272" class="s">Notify owners of access requests</text>
+  <text x="1016" y="288" class="s">(roadmap)</text>
+  <rect x="1000" y="324" width="240" height="116" rx="4" class="az"/>
+  <text x="1016" y="352" class="t">Azure Marketplace</text>
+  <text x="1016" y="372" class="s">Azure Application offer: ARM</text>
+  <text x="1016" y="388" class="s">template deploys into the customer's</text>
+  <text x="1016" y="404" class="s">subscription. Dual revenue stream:</text>
+  <text x="1016" y="420" class="s">marketplace + Azure consumption.</text>
+
+  <!-- arrows -->
+  <path d="M270 161 H300 V179 H330" class="ln"/>
+  <path d="M270 251 H300 V200" class="ln"/>
+  <path d="M270 341 H300 V200" class="ln"/>
+  <path d="M455 234 V270" class="lb"/>
+  <text x="462" y="257" class="lab">user / agent identity</text>
+  <path d="M580 330 H620 V174 H660" class="lb"/>
+  <path d="M580 360 H620 V290 H660" class="lb"/>
+  <path d="M580 400 H620 V398 H660" class="ln" stroke-dasharray="4 3"/>
+  <path d="M580 470 H620 V488 H660" class="ln"/>
+
+  <!-- FLOW -->
+  <rect x="40" y="560" width="1200" height="168" rx="4" fill="#fff" stroke="#edebe9"/>
+  <text x="60" y="590" class="h">THE KNOWLEDGE LOOP</text>
+  <g font-size="13" fill="#323130">
+    <circle cx="84" cy="634" r="16" fill="#0078d4"/><text x="79" y="639" fill="#fff" font-weight="700">1</text>
+    <text x="110" y="628" font-weight="600">Capture</text><text x="110" y="646" class="s">Team A's AI session or postmortem</text><text x="110" y="662" class="s">→ lessons in project "Contoso SQL"</text>
+    <circle cx="384" cy="634" r="16" fill="#0078d4"/><text x="379" y="639" fill="#fff" font-weight="700">2</text>
+    <text x="410" y="628" font-weight="600">Discover</text><text x="410" y="646" class="s">Team B (or its agent) asks before</text><text x="410" y="662" class="s">building; sees Contoso solved it</text>
+    <circle cx="684" cy="634" r="16" fill="#0078d4"/><text x="679" y="639" fill="#fff" font-weight="700">3</text>
+    <text x="710" y="628" font-weight="600">Request &amp; approve</text><text x="710" y="646" class="s">Owner approves Team B's Entra ID</text><text x="710" y="662" class="s">account with a business reason</text>
+    <circle cx="984" cy="634" r="16" fill="#0078d4"/><text x="979" y="639" fill="#fff" font-weight="700">4</text>
+    <text x="1010" y="628" font-weight="600">Reuse &amp; improve</text><text x="1010" y="646" class="s">Checklist / AGENTS.md for the agent;</text><text x="1010" y="662" class="s">votes flag stale advice</text>
+    <path d="M150 700 H1180" stroke="#c8c6c4" stroke-dasharray="4 4"/>
+    <text x="60" y="716" class="s">Every finished project makes the next one faster: knowledge is preserved when people, chats and projects end.</text>
+  </g>
+</svg>

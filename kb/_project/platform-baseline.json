@@ -1,0 +1,1 @@
+{"id": "platform-baseline", "name": "Platform Baseline", "owner": "arjun@contoso.com", "members": [], "client": "", "visibility": "org", "domain": "engineering", "description": "Org-wide landing-zone defaults every Azure web workload should start from.", "created": "2026-10-18"}

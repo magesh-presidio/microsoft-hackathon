@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
+  "handler": "Microsoft.Azure.CreateUIDef",
+  "version": "0.1.2-preview",
+  "parameters": {
+    "basics": [
+      {
+        "name": "appName",
+        "type": "Microsoft.Common.TextBox",
+        "label": "Site name",
+        "constraints": {
+          "required": true,
+          "regex": "^[a-z0-9-]{3,40}$",
+          "validationMessage": "3-40 lowercase letters, digits, hyphens"
+        }
+      },
+      {
+        "name": "recallApiKey",
+        "type": "Microsoft.Common.PasswordBox",
+        "label": {
+          "password": "Team API key",
+          "confirmPassword": "Confirm key"
+        },
+        "toolTip": "Required by editors and agents to save knowledge and use the MCP endpoint",
+        "constraints": {
+          "required": true,
+          "regex": "^.{12,}$",
+          "validationMessage": "At least 12 characters"
+        },
+        "options": {
+          "hideConfirmation": false
+        }
+      }
+    ],
+    "steps": [
+      {
+        "name": "ai",
+        "label": "AI search (optional)",
+        "elements": [
+          {
+            "name": "openAiEndpoint",
+            "type": "Microsoft.Common.TextBox",
+            "label": "Azure OpenAI endpoint"
+          },
+          {
+            "name": "openAiKey",
+            "type": "Microsoft.Common.PasswordBox",
+            "label": {
+              "password": "API key",
+              "confirmPassword": "Confirm"
+            },
+            "options": {
+              "hideConfirmation": true
+            }
+          },
+          {
+            "name": "openAiDeployment",
+            "type": "Microsoft.Common.TextBox",
+            "label": "Chat deployment name"
+          }
+        ]
+      }
+    ],
+    "outputs": {
+      "appName": "[basics('appName')]",
+      "openAiEndpoint": "[steps('ai').openAiEndpoint]",
+      "openAiKey": "[steps('ai').openAiKey]",
+      "openAiDeployment": "[steps('ai').openAiDeployment]",
+      "location": "[location()]",
+      "recallApiKey": "[basics('recallApiKey')]"
+    }
+  }
+}

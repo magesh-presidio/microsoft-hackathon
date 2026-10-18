@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpx
+azure-identity
+azure-mgmt-resource
+azure-cosmos
+azure-monitor-opentelemetry
+mcp<2
