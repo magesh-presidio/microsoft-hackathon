@@ -4,6 +4,8 @@
 
 > Microsoft Hackathon · Theme: **Knowledge Preservation**
 
+**▶ [Watch the demo video (4:38)](docs/Azure-Recall-Demo.mp4)**
+
 ![Discover: a restricted project already solved this problem](docs/images/02-locked.jpg)
 
 ## The problem
@@ -150,11 +152,12 @@ kb/                 Bundled demo knowledge (used locally and to seed Cosmos DB)
 infra/deploy.sh     One-command Azure deployment (keyless)
 marketplace/        Azure Marketplace package (ARM template + portal UI definition)
 Dockerfile          Container image (used by the Marketplace template)
-docs/               Solution document (PDF), architecture, diagrams, screenshots
+docs/               Demo video, solution document (PDF), architecture, diagrams, screenshots
 ```
 
 ## Documentation
 
+- [Demo video (4:38, with voice-over)](docs/Azure-Recall-Demo.mp4): end-to-end walkthrough
 - [Solution document (PDF)](docs/Azure-Recall-Solution.pdf): problem, solution, architecture, workflow, security, walkthrough, business model, roadmap
 - [docs/SOLUTION.md](docs/SOLUTION.md): solution write-up
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): components, sequence diagram, data model, access rules, scaling

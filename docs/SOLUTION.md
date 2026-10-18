@@ -80,6 +80,6 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for components, data model, security and 
 
 ## 8. Demo
 
-The demo video (under 7 minutes, with voice-over) was submitted with the hackathon form. Story: Priya's team solved a SQL analytics agent for Contoso; Maria's team gets a similar request from a new client. Maria discovers the locked project, requests access, Priya approves, and Maria's coding agent gets the full plan.
+Demo video (4:38, with voice-over): [Azure-Recall-Demo.mp4](Azure-Recall-Demo.mp4). Story: Priya's team solved a SQL analytics agent for Contoso; Maria's team gets a similar request from a new client. Maria discovers the locked project, requests access, Priya approves, and Maria's coding agent gets the full plan.
 
 Full document with diagrams and screenshots: [Azure-Recall-Solution.pdf](Azure-Recall-Solution.pdf).
