@@ -4,9 +4,7 @@
 
 > Microsoft Hackathon · Theme: **Knowledge Preservation**
 
-**▶ [Watch the demo video (4:38)](docs/Azure-Recall-Demo.mp4)**
-
-![Discover: a restricted project already solved this problem](docs/images/02-locked.jpg)
+[![Watch the demo video (4:38)](docs/images/demo-thumbnail.jpg)](docs/Azure-Recall-Demo.mp4)
 
 ## The problem
 
